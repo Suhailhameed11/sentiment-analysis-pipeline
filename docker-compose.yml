@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  sentiment:
+    build: .
+    container_name: sentiment_pipeline
+    volumes:
+      - .:/app
+    command: python src/predict.py
